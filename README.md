@@ -1,40 +1,38 @@
-# Vaccination Data Analysis and Visualization
+# Vaccination Data Analysis and Visualization 🌍💉
 
-## Overview
+Welcome to the **Vaccination Data Analysis and Visualization** project! This repository houses a Jupyter Notebook (`vaccine.ipynb`) that explores the impact of vaccines on disease cases, coverage, and incidence rates across countries like Aruba and Afghanistan. Using cleaned datasets from sources like the World Health Organization (WHO), we dive into vaccine effectiveness, coverage gaps, and regional disparities with 📊 stunning visualizations and 📈 robust statistical analyses.
 
-This repository contains a Jupyter Notebook (`vaccine_impact_analysis_updated.ipynb`) for analyzing and visualizing the impact of vaccine introductions on disease cases, coverage, and incidence rates across countries. The project uses cleaned datasets from sources like the World Health Organization (WHO) to address key questions about vaccine effectiveness, coverage disparities, and disease prevalence. The analysis focuses on diseases such as Hepatitis B, Diphtheria, and Invasive Meningococcal Disease, with data from countries like Aruba and Afghanistan.
+Built with Python, Pandas, Matplotlib, Seaborn, and Scipy, this project answers 10 key questions to uncover insights about global vaccination efforts.
 
-The notebook leverages Python with Pandas, Matplotlib, Seaborn, and Scipy to perform statistical analyses and generate visualizations (e.g., box plots, line plots, bar plots, scatter plots). It addresses 10 key questions to understand vaccine impact and identify coverage gaps.
+## 🎯 Objectives
 
-## Objectives
-
-The analysis answers the following questions:
-1. Is there a correlation between vaccine introduction and a decrease in disease cases?
-2. What is the trend in disease cases before and after vaccination campaigns?
-3. Which diseases have shown the most significant reduction in cases due to vaccination?
-4. What percentage of the target population has been covered by each vaccine?
-5. How does the vaccination schedule (e.g., booster doses) impact target population coverage?
-6. Are there significant disparities in vaccine introduction timelines across WHO regions?
-7. How does vaccine coverage correlate with disease reduction for specific antigens?
-8. Are there specific regions or countries with low coverage despite high availability of vaccines?
-9. What are the gaps in coverage for vaccines targeting high-priority diseases (e.g., TB, Hepatitis B)?
+The analysis tackles these questions:
+1. Is there a correlation between vaccine introduction and reduced disease cases?
+2. What are the trends in disease cases before and after vaccination campaigns?
+3. Which diseases show the most significant case reductions due to vaccines?
+4. What percentage of the target population is covered by each vaccine?
+5. How do vaccination schedules (e.g., booster doses) affect coverage?
+6. Are there disparities in vaccine introduction timelines across WHO regions?
+7. How does vaccine coverage correlate with disease reduction?
+8. Which regions have low coverage despite vaccine availability?
+9. What are the coverage gaps for high-priority diseases (e.g., TB, Hepatitis B)?
 10. Are certain diseases more prevalent in specific geographic areas?
 
-## Datasets
+## 📋 Datasets
 
-The project uses five cleaned datasets (in CSV format):
+The project uses five cleaned CSV datasets:
 
-1. **cleaned_cases.csv**: Disease case counts by country, year, and disease.
+1. **cleaned_cases.csv**: Disease case counts by country and year.
    - Columns: `GROUP`, `CODE`, `NAME`, `YEAR`, `DISEASE`, `DISEASE_DESCRIPTION`, `CASES`
    - Example: Aruba, 2023, Invasive Meningococcal Disease, 1 case
 
-2. **cleaned_coverage.csv**: Vaccination coverage data by antigen and country.
+2. **cleaned_coverage.csv**: Vaccination coverage by antigen and country.
    - Columns: `GROUP`, `CODE`, `NAME`, `YEAR`, `ANTIGEN`, `ANTIGEN_DESCRIPTION`, `COVERAGE_CATEGORY`, `COVERAGE_CATEGORY_DESCRIPTION`, `TARGET_NUMBER`, `DOSES`, `COVERAGE`
    - Example: Aruba, 2023, DTPCV3, 95.98% coverage
 
 3. **cleaned_incidence.csv**: Disease incidence rates per population unit.
    - Columns: `GROUP`, `CODE`, `NAME`, `YEAR`, `DISEASE`, `DISEASE_DESCRIPTION`, `DENOMINATOR`, `INCIDENCE_RATE`
-   - Example: Aruba, 2023, Invasive Meningococcal Disease, 9.3 per 1M population
+   - Example: Aruba, 2023, Invasive Meningococcal Disease, 9.3 per 1M
 
 4. **cleaned_schedule.csv**: Vaccination schedules by country and target population.
    - Columns: `CODE`, `COUNTRYNAME`, `WHO_REGION`, `YEAR`, `VACCINECODE`, `VACCINE_DESCRIPTION`, `SCHEDULEROUNDS`, `TARGETPOP`, `TARGETPOP_DESCRIPTION`, `GEOAREA`, `AGEADMINISTERED`, `SOURCECOMMENT`
@@ -44,18 +42,14 @@ The project uses five cleaned datasets (in CSV format):
    - Columns: `CODE`, `COUNTRYNAME`, `WHO_REGION`, `YEAR`, `VACCINE`, `INTRO`
    - Example: Afghanistan, 2023, Hepatitis B vaccine, Introduced (Yes)
 
-**Note**: Ensure these datasets are placed in the same directory as the notebook.
+**Note**: Place these datasets in the same directory as the notebook.
 
-## Setup Instructions
+## 🛠️ Setup Instructions
 
 ### Prerequisites
 - Python 3.10 or later
 - Jupyter Notebook or JupyterLab
-- Required Python libraries:
-  - `pandas`
-  - `matplotlib`
-  - `seaborn`
-  - `scipy`
+- Libraries: `pandas`, `matplotlib`, `seaborn`, `scipy`
 
 ### Installation
 1. Clone the repository:
@@ -64,7 +58,7 @@ The project uses five cleaned datasets (in CSV format):
    cd Vaccination-Data-Analysis-and-Visualization
    ```
 
-2. Create a virtual environment (optional but recommended):
+2. Create a virtual environment (recommended):
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -72,64 +66,60 @@ The project uses five cleaned datasets (in CSV format):
 
 3. Install dependencies:
    ```bash
-   pip install pandas matplotlib seaborn scipy
+   pip install pandas matplotlib seaborn scipy jupyter
    ```
 
-4. Install Jupyter Notebook:
-   ```bash
-   pip install jupyter
-   ```
-
-5. Launch Jupyter Notebook:
+4. Launch Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
 
-### Dataset Preparation
-- Place the five CSV files (`cleaned_cases.csv`, `cleaned_coverage.csv`, `cleaned_incidence.csv`, `cleaned_schedule.csv`, `cleaned_vaccine_intro.csv`) in the repository’s root directory.
-- Ensure the datasets match the column structure described above.
 
-## Usage
+### Dataset Preparation
+- Ensure the five CSV files are in the repository’s root directory.
+- Verify the datasets match the column structure described above.
+
+## 🚀 Usage
 
 1. **Run the Notebook**:
-   - Open `.ipynb` in Jupyter Notebook.
-   - Execute cells sequentially to load data, perform analyses, and generate visualizations.
+   - Open `vaccine.ipynb` in Jupyter Notebook or JupyterLab.
+   - Execute cells sequentially to load data, run analyses, and generate visualizations.
    - The notebook includes error handling for missing files or columns.
 
-2. **Visualizations**:
-   - Box plots: Compare disease cases before and after vaccine introduction.
-   - Line plots: Show case trends around introduction years.
-   - Bar plots: Display case reductions and coverage by vaccine/disease.
-   - Scatter plots: Correlate vaccine coverage with disease incidence.
+2. **Visualizations** 📊:
+   - **Box Plots**: Compare disease cases before and after vaccine introduction.
+   - **Line Plots**: Show case trends around introduction years.
+   - **Bar Plots**: Display case reductions and coverage by vaccine/disease.
+   - **Scatter Plots**: Correlate vaccine coverage with disease incidence.
 
 
-## Key Findings
+## 🔍 Key Findings
 
-- **Vaccine Impact**: Hepatitis B and Hib vaccines show significant case reductions where coverage is high (e.g., Aruba, 95.98% for DTPCV3).
-- **Coverage Trends**: Primary doses (e.g., DTPCV1, 97.99%) have higher coverage than boosters (e.g., DIPHCV5, 82.69%).
-- **Regional Disparities**: WHO’s EMR region (e.g., Afghanistan) shows later vaccine introductions and lower coverage compared to AMRO (e.g., Aruba).
-- **Disease Prevalence**: Invasive Meningococcal Disease (9.3 per 1M in Aruba) varies by region, with EMR showing higher rates for some diseases.
+- **Vaccine Impact**: Hepatitis B and Hib vaccines significantly reduce cases in high-coverage areas (e.g., Aruba, 95.98% for DTPCV3).
+- **Coverage Trends**: Primary doses (e.g., DTPCV1, 97.99%) outperform boosters (e.g., DIPHCV5, 82.69%).
+- **Regional Disparities**: EMR (e.g., Afghanistan) lags in vaccine introductions compared to AMRO (e.g., Aruba).
+- **Disease Prevalence**: Invasive Meningococcal Disease (9.3 per 1M in Aruba) and Neonatal Tetanus are more prevalent in EMR regions.
 
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! To contribute:
+We welcome contributions! To get started:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make changes and commit (`git commit -m "Add feature"`).
-4. Push to the branch (`git push origin feature-branch`).
+2. Create a branch: `git checkout -b feature-branch`.
+3. Commit changes: `git commit -m "Add feature"`.
+4. Push to the branch: `git push origin feature-branch`.
 5. Open a pull request.
 
-Please ensure code follows PEP 8 standards and includes clear comments.
+Follow PEP 8 standards and include clear comments in your code.
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 📬 Contact
 
-For questions or suggestions, contact the repository owner via GitHub issues or email (if provided).
+For questions or feedback, open an issue on GitHub or contact the repository owner.
 
 ---
 
-© 2025 ldotmithu
+© 2025 ldotmithu | Made with 💉 & 📊
